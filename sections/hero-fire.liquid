@@ -1,0 +1,80 @@
+{% if section.settings['show-banners'] %}
+  <section class="hero-fire hero-background">
+    <div class="container">
+      <div class="container-hero-fire">
+        <div class="hero-fire__info">
+          <h2 class="title title--semibold title--upper title--white title--medium">
+            {{ section.settings['fire-title'] }}
+            <strong>
+              {{ section.settings['fire-strong_title'] }}
+            </strong>
+          </h2>
+
+          <a href="{{ section.settings.link_url }}" class="btn btn--upper btn--big btn--radius btn--white">
+            {{- section.settings['fire-btn'] -}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+<style>
+  {% comment %} .hero-fire {
+    background-image: url('//cdn.shopify.com/s/files/1/0665/9922/3468/files/hero-fire.png?v=1729723346');
+    background-size: cover;
+  } {% endcomment %}
+  .hero-background {
+    background-image: url({{ section.settings.background-image | image_url }});
+    padding-top: 110px;
+    padding-bottom: 131px;
+    margin-bottom: 100px;
+    background-size: cover;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "hero fire",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-banners",
+      "label": "Show Banners",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "background-image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "fire-title",
+      "label": "Title Hero",
+      "default": "Every second counts"
+    },
+    {
+      "type": "text",
+      "id": "fire-strong_title",
+      "label": "Title Hero strong",
+      "default": "The lifesaving power of smoke alarms"
+    },
+    {
+      "type": "text",
+      "id": "fire-btn",
+      "label": "Button Hero",
+      "default": "Buy now"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero-Banner"
+    }
+  ]
+}
+{% endschema %}

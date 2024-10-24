@@ -1,0 +1,64 @@
+<nav class="navbar">
+  <label class="nav__toggle">
+    <input
+      type="checkbox"
+      id="menu-input"
+      class="nav__input"
+    >
+  </label>
+
+  <figure class="main-logo">
+    <a href="/">
+      <img
+        width=""
+        height=""
+        loading="lazy"
+        src="{{ section.settings.logo_menu | image_url }}"
+        alt="logo Fire🔥alert"
+      >
+    </a>
+  </figure>
+  <figure class="cart-mobile">
+    <img
+      width=""
+      height=""
+      loading="lazy"
+      src="{{ 'cart.svg' | asset_url }}"
+      alt=""
+    >
+  </figure>
+  <ul class="menu-links">
+    {% for link in linklists['main-menu'].links %}
+      <li>
+        <a class="link link--upper link--medium link--semibold link--light-gray" href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+    <div class="action-buttons">
+      <form action="/search" class="search-btn">
+        <input type="search">
+        <img
+          width=""
+          height=""
+          loading="lazy"
+          src="{{ 'search.svg' | asset_url }}"
+          class="search-img"
+          alt="search"
+        >
+      </form>
+      <button class="cart-btn">
+        <a href="/" class="">
+          <img
+            width=""
+            height=""
+            loading="lazy"
+            src="{{ 'cart.svg' | asset_url }}"
+            class="cart-img"
+            alt="cart"
+          >
+        </a>
+      </button>
+    </div>
+  </ul>
+</nav>
