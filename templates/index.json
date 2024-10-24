@@ -1,31 +1,26 @@
 {
     "sections": {
-      "banner": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {}
+      },
+      "header": {
         "type": "header",
         "settings": {}
       },
-      "three-images": {
+      "hero-fire": {
         "type": "hero-fire",
         "settings": {}
       },
-      "more-info": {
-        "type": "Discount Banner",
+      "footer": {
+        "type": "footer",
         "settings": {}
       },
-      "all-collections": {
-        "type": "all-collections",
-        "settings": {}
-      },
-      "all-products": {
-        "type": "all-products",
-        "settings": {}
-      }
     },
     "order": [
-      "banner",
+      "announcement-bar",
+      "header",
       "hero-fire",
-      "Discount Banner",
-      "all-collections",
-      "all-products"
+      "footer",
     ]
   }
