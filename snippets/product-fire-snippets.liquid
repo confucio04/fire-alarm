@@ -1,0 +1,52 @@
+<section class="product-fire">
+  <div class="container">
+    <div class="cards-fire">
+      {% assign collection_handles = section.settings.collection_one
+        | append: ','
+        | append: section.settings.collection_two
+        | append: ','
+        | append: section.settings.collection_three
+        | append: ','
+        | append: section.settings.collection_four
+      %}
+      {% assign collection_list = collection_handles | split: ',' %}
+
+      {% for collection_handle in collection_list %}
+        {% assign selected_collection = collections[collection_handle] %}
+
+        {% if selected_collection %}
+          <div class="card-fire">
+            <div class="card-img card--relative card--absolute">
+              <img
+                width=""
+                height=""
+                src="{{ selected_collection.metafields.custom.image | image_url }}"
+                alt="{{ selected_collection.title }} Image"
+              >
+            </div>
+            <div class="card-info">
+              <div class="card-icons">
+                <img
+                  width=""
+                  height=""
+                  src="{{ selected_collection.metafields.custom.icon | image_url }}"
+                  alt="{{ selected_collection.title }} Icon"
+                >
+              </div>
+              <span
+                class="title--upper"
+                style="border-bottom: 3px solid {{ selected_collection.metafields.custom.border_color }}"
+              >
+                {{ selected_collection.title }}
+              </span>
+              <p class="paragraph paragraph--gray">
+                {{ selected_collection.description | strip_html | replace: '\n', '' }}
+              </p>
+              <a href="{{ selected_collection.url }}" class="btn btn--radius btn--gradient btn--medium">Learn more</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

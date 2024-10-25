@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="essential-scroll">
+    <h2 class="title--bold title--big title--upper">
+      {{ section.settings.title_essential }}
+      <span>{{ section.settings.essential_strong }}</span>
+    </h2>
+    <div class="btns btn--bk-gray">
+      <button class="btn btn--bk-orange">
+        <img
+          width=""
+          height=""
+          src="{{ 'arrow-left.svg' | asset_url }}"
+          alt="arrow-left"
+        >
+      </button>
+      <button class="btn btn--bk-orange btn--bk-active">
+        <img
+          width=""
+          height=""
+          src="{{ 'arrow-right.svg' | asset_url }}"
+          alt="arrow-right"
+        >
+      </button>
+    </div>
+  </div>
+
+  <div class="essential-items">
+    {% for block in section.blocks %}
+      <div class="essential-item">
+        <div class="essential-img">
+          <img
+            width=""
+            height=""
+            src="{{ block.settings.icon_essential | image_url }}"
+            alt="fire"
+          >
+        </div>
+        <h3 class="title--upper">
+          {{ block.settings.title }}
+        </h3>
+        <p class="paragraph paragraph--gray">
+          {{ block.settings.description }}
+        </p>
+      </div>
+    {% endfor %}
+    {% comment %}
+      <div class="essential-item">
+          <div class="essential-img">
+              <img src="./assets/img/svg/significantly.svg" alt="fire">
+          </div>
+          <h3 class="title--upper">
+              Significantly <br>
+              Reduces Fire <br>
+              Fatalities:
+          </h3>
+          <p class="paragraph paragraph--gray">
+              Homes without working smoke <br>
+              alarms face a fire fatality rate <br>
+              two to three times greater than <br>
+              those with functional alarms.
+          </p>
+      </div>
+      <div class="essential-item">
+          <div class="essential-img">
+              <img src="./assets/img/svg/protection.svg" alt="fire">
+          </div>
+          <h3 class="title--upper">
+              24/7 Protection
+          </h3>
+          <p class="paragraph paragraph--gray">
+              Smoke alarms remain vigilant <br>
+              around the clock, ready to alert <br>
+              you as soon as they detect <br>
+              smoke, even when you are <br>
+              asleep.
+          </p>
+      </div>
+      <div class="essential-item">
+          <div class="essential-img">
+              <img src="./assets/img/svg/prevents.svg" alt="fire">
+          </div>
+          <h3 class="title--upper">
+              Prevents Smoke <br>
+              Inhalation Deaths
+          </h3>
+          <p class="paragraph paragraph--gray">
+              Most fire-related deaths result <br>
+              from inhaling toxic gases, <br>
+              not burns. Early warnings from <br>
+              smoke alarms help prevent this.
+          </p>
+      </div>
+      <div class="essential-item">
+          <div class="essential-img">
+              <img src="./assets/img/svg/prevents.svg" alt="fire">
+          </div>
+          <h3 class="title--upper">
+              Prevents Smoke <br>
+              Inhalation Deaths
+          </h3>
+          <p class="paragraph paragraph--gray">
+              Most fire-related deaths result <br>
+              from inhaling toxic gases, <br>
+              not burns. Early warnings from <br>
+              smoke alarms help prevent this.
+          </p>
+      </div>
+      <div class="essential-item">
+          <div class="essential-img">
+              <img src="./assets/img/svg/prevents.svg" alt="fire">
+          </div>
+          <h3 class="title--upper">
+              Prevents Smoke <br>
+              Inhalation Deaths
+          </h3>
+          <p class="paragraph paragraph--gray">
+              Most fire-related deaths result <br>
+              from inhaling toxic gases, <br>
+              not burns. Early warnings from <br>
+              smoke alarms help prevent this.
+          </p>
+      </div>
+    {% endcomment %}
+  </div>
+</div>

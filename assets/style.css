@@ -60,8 +60,10 @@ body{
 }
 .container{
     max-width: 1242px;
+    box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
+    padding-inline: 20px;
 }
 .title--bold{ font-family: var(--logik-bold);}
 .title--semibold{ font-family: var(--logik-semibold);}
@@ -96,31 +98,31 @@ body{
     justify-content: center;
 }
 .navbar{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-content: space-around;
     background-color: var(--white);
     padding: 24px 0;
-    flex-wrap: wrap;
     position: relative;
-    --icon-togle-menu: url('../assets/img/svg/bx-menu.svg');
+    --icon-togle-menu: url(bx-menu.svg);
     --transform-menu-show: translate(-100%);
 }
 .navbar:has(.nav__input:checked){
-    --icon-togle-menu: url('../assets/img/svg/bx-close.svg');
+    --icon-togle-menu: url('bx-close.svg');
     --transform-menu-show: translate(0);
 }
 .cart-mobile{display: none;}
 .title-desktop{display: block;}
 .menu-links{
     display: flex;
-    gap: 18px;
+    justify-content: space-evenly;
     align-items: center;
 }
 .header-fire, .main-logo, .nav__toggle{
     position: relative;
     z-index: 10;
+    display: block;
+    margin: 0 auto;
 }
 .nav__toggle{
     display: none;
@@ -254,7 +256,7 @@ link{font-family: var(--manrope);}
     border-inline: thin solid var(--light-gray);
     border-bottom: thin solid var(--light-gray);
     border-radius: 0px 0px 17px 17px;
-    padding-bottom: 36px;
+    padding: 0px 5px 36px;
 }
 .card-icons{
     position: absolute;
@@ -280,23 +282,21 @@ link{font-family: var(--manrope);}
     padding-bottom: 12px;
 }
 .card-info p{
+    display: block;
+    margin: auto;
+    padding-bottom: 32px;
+    max-width: 259px;
     font-size: 14px;
-    margin-bottom: 30px;
     font-weight: 200;
     line-height: 18px;
 }
 .card-info a{color: var(--white)}
-.benefits-fire {
-    background: var(--gradient-gray);
-    margin-bottom: 50px;
-}
-
-/* Frandugo code */
-
 .essential{
     padding: 100px 0;
     h2{
         line-height: 45px;
+        max-width: 459px;
+        font-family: var(--manrope);
         span{
             color: var(--orange);
         }
@@ -305,7 +305,6 @@ link{font-family: var(--manrope);}
         display: flex;
         gap: 25px;
         overflow-x: auto;
-        white-space: nowrap;
         padding: 20px 1px;
     }
     .essential-item{
@@ -322,6 +321,7 @@ link{font-family: var(--manrope);}
             font-weight: 600;
             line-height: 20px;
             font-size: 20px;
+            max-width: 258px;
         }
         p{
             font-size: 14px;
@@ -329,7 +329,6 @@ link{font-family: var(--manrope);}
         }
     }
 }
-
 footer{
     background: var(--black);
     padding: 80px 0 31px;
@@ -409,42 +408,23 @@ footer{
         }
     }
 }
-
-
-/* Frandugo code end */
-
-.key-benefits{
-    display: flex;
-    align-items: center;
-    background: var(--half-gray);
-    padding-right: 45px;
-    border-radius: 15px;
-    width: 100%;
-    position: relative; 
-    overflow: hidden; 
-    .key-benefits__img {
-        position: relative;
-        flex: 1;
-        border-radius: 15px 0 0 15px;
-        overflow: hidden;
-        img{
-            max-width: 100%;
-            height: 367px;
-            object-fit: cover; 
-            mask-image: linear-gradient(to right, black 70%, transparent 98%);
-        }  
-    } 
-   .key-benefits__info{
-        h3{
-            font-family: var(--logik-bold);
-            font-size: 35px;
-            line-height: 48px;
-            padding-bottom: 38px;
-            letter-spacing: 5px;
-        }
-       
-    } 
+.home-banner{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
+.key-benefits__info{
+    grid-column: 2;
+    h3{
+        font-size: 35px;
+        line-height: 44px;
+        padding-bottom: 38px;
+        letter-spacing: 5px;
+        max-width: 611px;
+        font-family: var(--logik-bold);
+        font-weight: bolder;
+    }
+    
+} 
 .why-smoke-fire {padding-bottom: 60px;}
 .essential-scroll {
     display: flex;
@@ -483,16 +463,15 @@ footer{
 .cards-scroll {
     display: flex;
     gap: 24px;
-    overflow-x: auto; /* Habilita el scroll horizontal */
-    white-space: nowrap; /* Evita que las tarjetas se vayan a la siguiente línea */
-   
+    overflow-x: auto; 
+    white-space: nowrap; 
 }
 .card-scroll {
     background: var(--semi-white);
     border-radius: 10px;
     padding: 75px 36px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra pequeña y suave */
-              0 1px 3px rgba(0, 0, 0, 0.08); /* Sombra adicional */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08); 
  
 }
 .card-scroll h4{
@@ -511,6 +490,7 @@ footer{
         padding-bottom: 70px;
         text-align: center;
         font-size: 36px;
+        font-family: var(--manrope);
     }
 }
 .cards-choose {
@@ -523,6 +503,7 @@ footer{
         line-height: 23px;
         margin-bottom: 17px;
         font-weight: 600;
+        max-width: 203px;
     }
     p{
         line-height: 21px;

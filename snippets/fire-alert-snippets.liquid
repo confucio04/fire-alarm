@@ -1,0 +1,37 @@
+<div class="container">
+  <h3 class="title title--upper title--bold title--white">
+    {{ section.settings.title_alert }}
+  </h3>
+  <div class="cards-choose">
+    {% for block in section.blocks %}
+      <div class="card-choose">
+        <div class="card-choose__img">
+          <img
+            width=""
+            height=""
+            loading="lazy"
+            src="{{ block.settings.image | image_url }}"
+            alt="{{ block.settings.title }}"
+          >
+        </div>
+        <div class="card-choose__info">
+          <div class="card-choose__icons">
+            <img
+              width=""
+              height=""
+              loading="lazy"
+              src="{{ block.settings.icon | image_url }}"
+              alt="{{ block.settings.title }}"
+            >
+          </div>
+          <span class="title title--upper">
+            {{ block.settings.title }}
+          </span>
+          <p class="paragraph paragraph--gray">
+            {{ block.settings.description }}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

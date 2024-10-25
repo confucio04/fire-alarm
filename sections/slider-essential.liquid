@@ -1,0 +1,51 @@
+<section class="essential">
+  {% render 'essential-snippets' %}
+</section>
+{% schema %}
+{
+  "name": "slider essential",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_essential",
+      "label": "Title",
+      "default": "Why smoke alarms"
+    },
+    {
+      "type": "text",
+      "id": "essential_strong",
+      "label": "Title strong",
+      "default": "are essential?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card Slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_essential",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider essential",
+      "category": "sliders"
+    }
+  ]
+}
+{% endschema %}

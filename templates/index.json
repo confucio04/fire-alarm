@@ -1,26 +1,12 @@
 {
     "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "settings": {}
-      },
-      "header": {
-        "type": "header",
-        "settings": {}
-      },
       "hero-fire": {
         "type": "hero-fire",
         "settings": {}
       },
-      "footer": {
-        "type": "footer",
-        "settings": {}
-      },
+      
     },
     "order": [
-      "announcement-bar",
-      "header",
       "hero-fire",
-      "footer",
     ]
   }

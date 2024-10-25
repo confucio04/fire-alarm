@@ -1,0 +1,50 @@
+<section class="why-choose">
+  {% render 'fire-alert-snippets' %}
+</section>
+{% schema %}
+{
+  "name": "fire alert",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_alert",
+      "label": "Title",
+      "default": "Why choose fire alert?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fire Alert",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

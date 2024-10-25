@@ -1,0 +1,55 @@
+<section class="home-banner">
+  <div class="container">
+    <div class="banner-key">
+      <div class="key-benefits__info">
+        <h3 class="title title--upper title--white ">
+          {{ section.settings.title_benefits }}
+          <strong class="title--yellow">{{ section.settings.title_strong }}</strong>
+        </h3>
+        <a href="{{ section.settings.url_key }}" class="btn btn--big btn--radius btn--white"> See more </a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .banner-key {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 63px;
+    background: url({{'key-benefits-img.png'|asset_url}});
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 64px 4px 86px 7px;
+    border-radius: 0px 16px 16px 0px;
+  }
+</style>
+{% schema %}
+{
+  "name": "key-benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_benefits",
+      "label": "Title",
+      "default": "Key Benefits"
+    },
+    {
+      "type": "text",
+      "id": "title_strong",
+      "label": "Title strong",
+      "default": "of fire alert smoke alarms"
+    },
+    {
+      "type": "url",
+      "id": "url_key",
+      "label": "Link Section"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Benefits",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}
