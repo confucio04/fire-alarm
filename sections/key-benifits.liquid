@@ -104,6 +104,14 @@
     }
   }
   @media (width >= 320px) and (width <= 579px) {
+    .letter--medium {
+      font-size: 20px;
+    }
+    .main-logo{
+      img{
+        width: 100%;
+      }
+    }
     .navbar {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -160,7 +168,7 @@
       }
     }
     .product-fire {
-      margin-inline: 50px;
+      margin-inline: 12px;
     }
 
     .banner-key {
@@ -189,8 +197,14 @@
     }
     .cards-choose {
       grid-template-columns: repeat(1, 1fr);
-      padding-inline: 100px;
+      padding-inline: 37px;
     }
+    footer {
+      & .footer-logo {
+          img {
+              width: 100%;
+          }
+      }
   }
 </style>
 {% schema %}
