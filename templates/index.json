@@ -1,12 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "hero-fire": {
-        "type": "hero-fire",
-        "settings": {}
-      },
-      
+  "sections": {
+    "hero-fire": {
+      "type": "hero-fire",
+      "settings": {
+        "show-banners": true,
+        "background_image": "shopify://shop_images/hero-fire.png",
+        "fire-title": "Every second counts",
+        "fire-strong_title": "The lifesaving power of smoke alarms",
+        "fire-btn": "Buy now",
+        "link_url": ""
+      }
     },
-    "order": [
-      "hero-fire",
-    ]
-  }
+    "list_collections_XkqxJW": {
+      "type": "list-collections",
+      "settings": {
+        "collection_one": "smoke-alarms",
+        "collection_two": "carbon-monoxide-alarms-1",
+        "collection_three": "heat-alarms",
+        "collection_four": "water-alarms"
+      }
+    },
+    "key_benifits_tYNLhE": {
+      "type": "key-benifits",
+      "settings": {
+        "title_benefits": "Key Benefits",
+        "title_strong": "of fire alert smoke alarms",
+        "url_key": ""
+      }
+    },
+    "slider_essential_rAAFjW": {
+      "type": "slider-essential",
+      "settings": {
+        "title_essential": "Why smoke alarms",
+        "essential_strong": "are essential?"
+      }
+    },
+    "fire_alert_LY8KND": {
+      "type": "fire-alert",
+      "blocks": {
+        "card_yP7i6Y": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/sout.png",
+            "icon": "shopify://shop_images/south.svg",
+            "title": "Sout african lives matter",
+            "description": "Proudly providing easy to install and quality Fire safety solutions for all South Africans."
+          }
+        },
+        "card_WwFEW4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/affordable.png",
+            "icon": "shopify://shop_images/affordable.svg",
+            "title": "Affordable Safety Solutions",
+            "description": "High-quality smoke alarms at competitive prices, making safety accessible for everyone."
+          }
+        },
+        "card_geGWQQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/compresive.png",
+            "icon": "shopify://shop_images/comprehensive.svg",
+            "title": "Comprehensive Support",
+            "description": "Contact our customer service to get help with any questions or issues."
+          }
+        },
+        "card_CMjpe7": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/reliability.png",
+            "icon": "shopify://shop_images/Reliability.svg",
+            "title": "Reliability",
+            "description": "All products are tested to high standards with certifications."
+          }
+        }
+      },
+      "block_order": [
+        "card_yP7i6Y",
+        "card_WwFEW4",
+        "card_geGWQQ",
+        "card_CMjpe7"
+      ],
+      "settings": {
+        "title_alert": "Why choose fire alert?"
+      }
+    }
+  },
+  "order": [
+    "hero-fire",
+    "list_collections_XkqxJW",
+    "key_benifits_tYNLhE",
+    "slider_essential_rAAFjW",
+    "fire_alert_LY8KND"
+  ]
+}
