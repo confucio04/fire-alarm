@@ -22,6 +22,176 @@
     padding: 64px 4px 86px 7px;
     border-radius: 0px 16px 16px 0px;
   }
+  @media (width >= 768px) and (width <= 960px) {
+    .hero-background {
+      padding-top: 103px;
+      padding-bottom: 72px;
+    }
+    .hero-fire {
+      & .hero-fire__info {
+        h2 {
+          font-size: 32px;
+          line-height: 56px;
+          strong {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+    .banner-key {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+      background: url(/cdn/shop/t/3/assets/mobile-benefits.png?v=1753847…);
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 140px 0;
+      background-position: center;
+      .key-benefits__info {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+  }
+  @media (width >= 580px) and (width <= 767px) {
+    .navbar {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .hero-background {
+      padding-top: 39px;
+      padding-bottom: 53px;
+      margin-bottom: 100px;
+    }
+    .hero-fire__info {
+      h2 {
+        font-size: 22px;
+        line-height: 47px;
+        padding-bottom: 30px;
+        strong {
+          font-size: 33px;
+          max-width: 483px;
+          letter-spacing: 0;
+        }
+      }
+    }
+    .product-fire {
+      margin-inline: 60px;
+    }
+    .banner-key {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+      background: url(/cdn/shop/t/3/assets/mobile-benefits.png?v=1753847…);
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 140px 0;
+      background-position: center;
+      .key-benefits__info {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+    .cards-choose {
+      grid-template-columns: repeat(1, 1fr);
+      margin-inline: 90px;
+    }
+  }
+  @media (width >= 320px) and (width <= 579px) {
+    .navbar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      background-color: var(--white);
+      padding: 24px 0;
+      position: relative;
+      --icon-togle-menu: url({{'bx-menu.svg'|asset_url}});
+      --transform-menu-show: translate(-100%);
+    }
+    .navbar:has(.nav__input:checked) {
+      --icon-togle-menu: url({{'bx-close.svg'|asset_url}});
+      --transform-menu-show: translate(0);
+    }
+    .hero-background {
+      background-image: url({{'mobile-hero.png'|asset_url}});
+      padding-top: 110px;
+      padding-bottom: 131px;
+      margin-bottom: 100px;
+      background-size: cover;
+    }
+    .navbar {
+      position: relative;
+    }
+    .menu-links {
+      transform: var(--transform-menu-show);
+      position: fixed;
+      inset: 0;
+      padding: 1.5rem 5%;
+      background-color: var(--blue);
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .nav__toggle {
+      display: block;
+    }
+    .cart-mobile {
+      display: block;
+      margin: 0 auto;
+    }
+    .hero-fire__info {
+      h2 {
+        font-size: 15px;
+        line-height: 56px;
+        strong {
+          font-size: 37px;
+          max-width: 323px;
+        }
+      }
+    }
+    .product-fire {
+      margin-inline: 50px;
+    }
+
+    .banner-key {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+      background: url(/cdn/shop/t/3/assets/mobile-benefits.png?v=1753847…);
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 0px 0 90px 0;
+      background-position: center;
+    }
+    .key-benefits__info {
+      grid-column: 1;
+      grid-row: 3;
+      display: block;
+      margin: 0 auto;
+      h3 {
+        font-size: 32px;
+        line-height: 38px;
+        max-width: 346px;
+    }
+    }
+    .btns {
+      display: none;
+    }
+    .cards-choose {
+      grid-template-columns: repeat(1, 1fr);
+      padding-inline: 100px;
+    }
+  }
 </style>
 {% schema %}
 {

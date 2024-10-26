@@ -97,20 +97,7 @@ body{
     display: flex;
     justify-content: center;
 }
-.navbar{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    place-content: space-around;
-    background-color: var(--white);
-    padding: 24px 0;
-    position: relative;
-    --icon-togle-menu: url(bx-menu.svg);
-    --transform-menu-show: translate(-100%);
-}
-.navbar:has(.nav__input:checked){
-    --icon-togle-menu: url('bx-close.svg');
-    --transform-menu-show: translate(0);
-}
+
 .cart-mobile{display: none;}
 .title-desktop{display: block;}
 .menu-links{
@@ -535,6 +522,7 @@ footer{
     border-radius: 100px;
 }
 .card-choose__icons img{height: 44px;}
+
 /* Breakpoint-mobile */
 @media (min-width: 961px) and (max-width: 1265px){
     .hero-fire{
@@ -546,7 +534,7 @@ footer{
     .essential{margin-inline: 20px;}
     .cards-choose{margin-inline: 20px;}
 }
-@media (min-width: 768px) and (max-width: 960px){
+@media (width >= 768px) and (width <= 960px){
     .navbar {gap:18px}
     .hero-fire{
         &::before{width: 41%;}
@@ -590,7 +578,7 @@ footer{
         gap:27px;
     }
 }
-@media (min-width: 580px) and (max-width: 767px){
+@media (width >= 580px) and (width <= 767px){
     .cards-fire{grid-template-columns: repeat(1,1fr);}
     .key-benefits {
         flex-direction: column;
@@ -652,4 +640,65 @@ footer{
         }
     }
 }
-@media (min-width: 320px) and (max-width: 579px){}
+@media (width >= 320px) and (width <= 579px){
+    .cards-fire{grid-template-columns: repeat(1,1fr);}
+    .key-benefits {
+        flex-direction: column;
+        padding-right: 0;
+        padding-bottom: 80px;
+        .key-benefits__img{ 
+            img{
+                mask-image: linear-gradient(to bottom, black 62%, transparent 84%);
+            }
+        }
+        .key-benefits__info {
+            h3 {
+                font-family: var(--logik-bold);
+                font-size: 27px;
+                line-height: 32px;
+                padding-bottom: 38px;
+                letter-spacing: 5px;
+            }
+        }
+        button{
+            font-size: 17px;
+            padding: 10px 25px;
+        }
+    }
+    .cards-choose{grid-template-columns: repeat(1,1fr);}
+    footer {
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding-bottom: 55px;
+            border-bottom: thin solid var(--dark-gray);
+            border-bottom: 0;
+            margin-bottom: 23px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .footer-logo {
+            grid-row: 2;
+            img{
+                height: 129px;
+                transform: translateX(0px);
+            }
+        }
+        .footer-subscribe{
+            h3,p,form{
+                display: none;
+            }
+        }
+        .redes-social {
+            display: flex;
+            gap: 7px;
+            justify-content: center;
+            padding-top: 37px;
+        }
+        .copyright {
+            p {
+                color: var(--white);
+            }
+        }
+    }
+}
