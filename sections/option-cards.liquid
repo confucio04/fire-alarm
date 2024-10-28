@@ -1,0 +1,36 @@
+<section class="options-cards">
+  {% render 'option-cards-snippets' %}
+</section>
+{% schema %}
+{
+  "name": "Option Cards",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection_one",
+      "label": "Selecciona la colección 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection_two",
+      "label": "Selecciona la colección 2"
+    },
+    {
+      "type": "collection",
+      "id": "collection_three",
+      "label": "Selecciona la colección 3"
+    },
+    {
+      "type": "collection",
+      "id": "collection_four",
+      "label": "Selecciona la colección 4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Option Cards Collections",
+      "category": "collection"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,49 @@
+<section class="our-products">
+  {% render 'our-products-snippets' %}
+</section>
+<style>
+  .our-products {
+    background-image: url('{% if section.settings.image_our != blank %}{{ section.settings.image_our | image_url }}{% else %}{{ 'no-image.png' | file_url }}{% endif %}');
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 40px;
+    padding-top: 65px;
+    padding-bottom: 284px;
+  }
+</style>
+{% schema %}
+{
+  "name": "Our Products",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_our",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "title_our",
+      "label": "title",
+      "default": "Our products"
+    },
+    {
+      "type": "textarea",
+      "id": "description_our",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "url_our",
+      "label": "link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Our Products",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}

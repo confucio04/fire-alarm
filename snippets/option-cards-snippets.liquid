@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="container-options-cards">
+    {% assign collection_handles = section.settings.collection_one
+      | append: ','
+      | append: section.settings.collection_two
+      | append: ','
+      | append: section.settings.collection_three
+      | append: ','
+      | append: section.settings.collection_four
+    %}
+    {% assign collection_list = collection_handles | split: ',' %}
+
+    {% for collection_handle in collection_list %}
+      {% assign selected_collection = collections[collection_handle] %}
+
+      {% if selected_collection %}
+        <a href="{{  }}" class="option-card bg-hover">
+          <div class="option-card__icon">
+            <img
+              width=""
+              height=""
+              src="{{ selected_collection.metafields.custom.icon | image_url }}"
+              alt="{{ selected_collection.title }} Image"
+            >
+          </div>
+          <div class="option-card__info">
+            <h2 class="title title--upper title--gray">{{ selected_collection.title }}</h2>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+    {% comment %}
+      <a href="#" class="option-card bk--orange">
+        <div class="option-card__icon">
+          <img
+            width=""
+            height=""
+            src="assets/img/svg/carbon-2.svg"
+            alt="Carbon-monoxide"
+          >
+        </div>
+        <div class="option-card__info">
+          <h2 class="title title--upper title--gray title--small">Carbon-monoxide Alarm</h2>
+        </div>
+      </a>
+      <a href="#" class="option-card bk--yellow">
+        <div class="option-card__icon">
+          <img
+            width=""
+            height=""
+            src="assets/img/svg/heat-3.svg"
+            alt="heat alarms"
+          >
+        </div>
+        <div class="option-card__info">
+          <h2 class="title title--upper title--gray">Heat alarms</h2>
+        </div>
+      </a>
+      <a href="#" class="option-card bk--blue">
+        <div class="option-card__icon">
+          <img
+            width=""
+            height=""
+            src="assets/img/svg/water-4.svg"
+            alt="water alarms"
+          >
+        </div>
+        <div class="option-card__info">
+          <h2 class="title title--upper title--gray">water alarms</h2>
+        </div>
+      </a>
+    {% endcomment %}
+  </div>
+</div>
+<style>
+  .bg-hover{
+      transition: all .5s;
+      &:hover{
+          background-color: {{ selected_collection.metafields.custom.border_color }};
+          h2{
+              color: var(--white);
+          }
+      }
+  }
+</style>
